@@ -1,0 +1,5 @@
+audio/
+pdfs/
+captions/
+__pycache__/
+*.pyc
