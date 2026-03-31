@@ -233,6 +233,19 @@ header .subtitle {{ font-size: 11px; opacity: 0.7; margin-top: 2px; }}
   font-size: 13px;
 }}
 
+.row-keywords, .row-docs {{
+  align-items: center;
+}}
+.row-meta-label {{
+  font-size: 11px;
+  font-family: sans-serif;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  margin-right: 2px;
+}}
 .row-keywords {{
   padding: 0 16px 8px;
   display: flex;
@@ -541,7 +554,7 @@ function renderMeetings() {{
 
     // Keyword chips
     if (m.keywords && m.keywords.length) {{
-      html += '<div class="row-keywords">';
+      html += '<div class="row-keywords"><span class="row-meta-label">Keywords:</span> ';
       m.keywords.forEach(function(k) {{
         var isActive = k === activeKeyword;
         html += '<span class="kw-chip' + (isActive ? ' active' : '') + '" data-kw="' + escHtml(k) + '">' + escHtml(k) + '</span>';
@@ -551,7 +564,7 @@ function renderMeetings() {{
 
     // Document chips + transcript chip
     if (hasContent) {{
-      html += '<div class="row-docs">';
+      html += '<div class="row-docs"><span class="row-meta-label">Materials:</span> ';
       var typeOrder = ["minutes","agenda","testimony","variance","report","other"];
       typeOrder.forEach(function(t) {{
         m.docs.filter(function(d){{return d.doc_type===t;}}).forEach(function(d) {{

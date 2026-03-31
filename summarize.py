@@ -38,8 +38,9 @@ SUMMARY_PROMPT = """\
 Below is content from a NYC Board of Correction public meeting on {date} ({display}).
 
 Your task:
-1. Write a 3–5 sentence SUMMARY covering: the main topics discussed, any key votes or actions taken, \
-and notable testimony or public comments. Be specific — name policies, rules, or programs by name where relevant.
+1. Write a SUMMARY as 3–6 bullet points, one per distinct topic or action. Each bullet should be 1–2 sentences. \
+Cover: main topics discussed, any key votes or actions taken, and notable testimony or public comments. \
+Be specific — name policies, rules, or programs by name where relevant. Format bullets with a leading "• " character.
 
 2. Produce a KEYWORDS list of 8–15 topic tags covering every substantive issue touched in this meeting. \
 Tags should be short phrases (1–3 words), lowercase, useful for searching across many meetings. \
